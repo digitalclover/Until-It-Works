@@ -1,2 +1,2 @@
-# Until-It-Works
+# Until It Works
 My Professional Development Blog
