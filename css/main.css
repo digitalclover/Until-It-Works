@@ -94,11 +94,23 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+html,body{
+    background-color: #eee;
+}
+
 
 main{
     max-width: 1024px;
     width: 100%;
-    margin:0 auto; 
+    margin:0 auto;
+    color:#333;
+}
+
+main p{
+    margin-left:2em;
+    font-size:1.5rem;
+    width:75%;
+    line-height: 1.3em;
 }
 
 
