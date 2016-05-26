@@ -1,38 +1,77 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Until It Works | Joshua McCarthy</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, user-scalable=no, shrink-to-fit=no">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="/dist/styles/styles.dev.css">
+        <link rel="stylesheet" href="/dist/styles/styles.min.css">
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <header>
-            <h1>Until <span>It Works</span></h1>
+            <div class="uiw-container">
+                <h1>Until <span aria-hidden="true">(</span>It Works<span aria-hidden="true">) {</span></h1>
+                <h2><span aria-hidden="true">//</span> The professional web development blog of Joshua McCarthy
+            </div>
         </header>
         <main>
-            <article>
-                <h1>Tabbed Content</h1>
-                <p>
-                    I figured I would start of easy and discuss something that I have seen countless of times when working with other companies and developers. Tabbed content is an easy design solution when you have a grouping of content based on category. Visually, it makes sense to the user that what tab they tap on will display the content of that category.
-                </p>
-                <figure>
-                    <img src="/dist/images/tabs_bootstrap_example.png" alt="">
-                    <figcaption>An example of a tabbed based layout</figcaption>
-                </figure>
-            </article>
+            <div class="uiw-container">
+                <article>
+                    <h1>Tabbed Content</h1>
+                    <em>May 25, 2016</em>
+                    <p>
+                        As my first entry on this web development blog, I decided to start off on an easy topic, discussing something that I have seen countless of times when working with other companies and developers. Tabbed content is an easy design solution when you have a grouping of content based on category. Visually, it makes sense to the user that what tab they tap on will display the content of that category.
+                    </p>
+                    <figure>
+                        <img src="/dist/images/tabs_bootstrap_example.png" alt="">
+                        <figcaption>An example of tabbed based layout (<a href="http://getbootstrap.com/javascript/#tabs" target="_blank">http://getbootstrap.com/javascript/#tabs</a>)</figcaption>
+                    </figure>
+                    <p>Now this is by no means a bash on Bootstrap.  It is an impressive resource that has its uses for very specific circumstances, however I do not find production websites to be one of them.</p>
+                    <p>If you were to look at the supplemented source code that accompanies this tab example, you will find something that I see from many developers.  Note that I've cleaned out the majority of classes to make things more ledgible.</p>
+                    <figure class="code">
+                        <code>
+                            &lt;!-- Tab navigation --&gt;<br />
+                            &lt;ul&gt;<br />
+                                &nbsp;&nbsp;&lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;<br />
+                                &nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Profile&lt;/a&gt;&lt;/li&gt;<br />
+                                &nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Messages&lt;/a&gt;&lt;/li&gt;<br />
+                                &nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Settings&lt;/a&gt;&lt;/li&gt;<br />
+                            &lt;/ul&gt;<br />
+                            <br />
+                            &lt;!-- Tab panes --&gt;<br />
+                            &lt;div&gt;<br />
+                                &nbsp;&nbsp;&lt;section active"&gt;Content&lt;/section&gt;<br />
+                                &nbsp;&nbsp;&lt;section&gt;Content&lt;/section&gt;<br />
+                                &nbsp;&nbsp;&lt;section&gt;Content&lt;/section&gt;<br />
+                                &nbsp;&nbsp;&lt;section&gt;Content&lt;/section&gt;<br />
+                            &lt;/div&gt;<br />
+                        </code>
+                        <figcaption>Source code, edited for clarity (<a href="http://getbootstrap.com/javascript/#tabs" target="_blank">http://getbootstrap.com/javascript/#tabs</a>)</figcaption>
+                    </figure>
+                    <p>This is the most basic example of a developer trying to make the code more convenient for them, while sacrificing the convenience of the user.</p>
+                    <p>The easiest example of this inconvenience is screen readers. A screen reader, for those unaware, is a browser tool that audibly reads the content from a webpage. The most common user case for screen readers are for those with impared vision.</p>
+                    <p>Screen readers ignore any CSS since there is no use for visual styles. The same argument can be made for JavaScript functions that visually change the same content. Take away the CSS and JavaScript from the above example, and you are left with the following:</p>
+                    <blockquote>
+                        <q>Home, Profile, Messages, Settings,<br /> Content, Content, Content, Content</q>
+                    </blockquote>
+                    <p>Now replace each <q>Content</q> with paragraphs upon paragraphs of text. Will you know when one section ends? How about when another section begins? This current setup presents no guidance or organization of content.</p>
+                    <p>So how do we fix this?  I&rsquo;ll fill you in on some options tomorrow.</p>
+                </article>
+            </div>
         </main>
         <footer>
-            <h1></h1>
+            <div class="uiw-container">
+                <h1 aria-hidden="true">}</h1>
+                <small>
+                    <p>Copyright &copy; 2016, Joshua McCarthy</p>
+                </small>
+            </div>
         </footer>
     </body>
 </html>
